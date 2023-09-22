@@ -16,7 +16,8 @@ def preload(): #打開瀏覽器
     chrome = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
     chrome.maximize_window()    
     chrome.implicitly_wait(5)   #隱式等待 最多給五秒等待，提早載入好，提早往下走
-    chrome.get("http://localhost:8000/")
+    # chrome.get("http://localhost:8000/")
+    chrome.get('https://www.youtube.com/')
     return chrome
 
 def login(chrome,mail,password): #登入會員
